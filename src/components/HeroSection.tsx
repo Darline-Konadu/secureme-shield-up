@@ -1,96 +1,54 @@
 
 import { Button } from '@/components/ui/button';
+import { Shield, Lock, Eye } from 'lucide-react';
 
 const HeroSection = () => {
   return (
-    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background Effects */}
-      <div className="absolute inset-0 bg-hero-gradient"></div>
-      <div className="absolute inset-0">
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-cyber-blue/10 rounded-full blur-3xl animate-pulse-glow"></div>
-        <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-cyber-purple/10 rounded-full blur-3xl animate-pulse-glow"></div>
-      </div>
-
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <div className="mb-8">
-          {/* Badge */}
-          <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyber-blue/20 to-cyber-purple/20 border border-cyber-blue/30 mb-8">
-            <span className="text-cyber-blue text-sm font-medium">🚀 Now in Beta</span>
+    <section id="home" className="pt-20 pb-32 bg-hero-gradient">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center">
+          <div className="flex justify-center mb-8">
+            <div className="relative">
+              <Shield className="w-24 h-24 text-cyber-blue animate-pulse-glow" />
+              <div className="absolute inset-0 bg-cyber-blue/20 rounded-full animate-glow"></div>
+            </div>
           </div>
-
-          {/* Main Headline */}
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
-            <span className="bg-gradient-to-r from-white to-slate-300 bg-clip-text text-transparent">
-              SecureMe:
-            </span>
-            <br />
-            <span className="bg-gradient-to-r from-cyber-blue to-cyber-purple bg-clip-text text-transparent cyber-text-glow">
-              Stop Fraud Before It Starts
-            </span>
+          
+          <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyber-blue to-cyber-purple bg-clip-text text-transparent">
+            Stop Fraud Before It Starts
           </h1>
-
-          {/* Subheadline */}
-          <p className="text-xl md:text-2xl text-slate-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-            Advanced AI-powered identity verification and real-time fraud detection that protects your business and builds customer trust.
+          
+          <p className="text-xl md:text-2xl text-slate-300 mb-8 max-w-3xl mx-auto">
+            Advanced AI-powered fraud detection that protects your business and customers 
+            with real-time threat analysis and prevention.
           </p>
-
-          {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-            <Button size="lg" className="cyber-button text-lg px-8 py-4">
-              🎯 Try Live Demo
+          
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
+            <Button className="cyber-button text-lg px-8 py-4">
+              Start Free Trial
             </Button>
-            <Button size="lg" variant="outline" className="border-slate-600 text-slate-300 hover:text-white hover:border-cyber-blue transition-all duration-300">
-              📖 See How It Works
+            <Button variant="outline" className="text-lg px-8 py-4 border-cyber-blue text-cyber-blue hover:bg-cyber-blue/10">
+              Watch Demo
             </Button>
           </div>
-
-          {/* Trust Indicators */}
-          <div className="flex flex-wrap justify-center items-center gap-8 text-slate-400 text-sm">
-            <div className="flex items-center gap-2">
-              <span className="text-cyber-green">✓</span>
-              <span>99.9% Accuracy</span>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16">
+            <div className="cyber-card p-6 text-center">
+              <Lock className="w-12 h-12 text-cyber-blue mx-auto mb-4" />
+              <h3 className="text-xl font-semibold mb-2 text-white">99.9% Accuracy</h3>
+              <p className="text-slate-400">Industry-leading fraud detection with minimal false positives</p>
             </div>
-            <div className="flex items-center gap-2">
-              <span className="text-cyber-green">✓</span>
-              <span>Sub-second Response</span>
+            
+            <div className="cyber-card p-6 text-center">
+              <Eye className="w-12 h-12 text-cyber-green mx-auto mb-4" />
+              <h3 className="text-xl font-semibold mb-2 text-white">Real-time Analysis</h3>
+              <p className="text-slate-400">Instant threat detection and response in milliseconds</p>
             </div>
-            <div className="flex items-center gap-2">
-              <span className="text-cyber-green">✓</span>
-              <span>Enterprise Grade</span>
-            </div>
-          </div>
-        </div>
-
-        {/* Hero Visual */}
-        <div className="relative mt-16">
-          <div className="cyber-card p-8 max-w-4xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              {/* Real-time Detection */}
-              <div className="text-center">
-                <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-cyber-blue to-cyber-purple rounded-full flex items-center justify-center text-2xl">
-                  🔍
-                </div>
-                <h3 className="text-lg font-semibold text-white mb-2">Real-Time Detection</h3>
-                <p className="text-slate-400 text-sm">Instant fraud analysis with ML algorithms</p>
-              </div>
-
-              {/* Identity Verification */}
-              <div className="text-center">
-                <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-cyber-green to-cyber-blue rounded-full flex items-center justify-center text-2xl">
-                  🛡️
-                </div>
-                <h3 className="text-lg font-semibold text-white mb-2">Identity Verification</h3>
-                <p className="text-slate-400 text-sm">Biometric and document authentication</p>
-              </div>
-
-              {/* Smart Alerts */}
-              <div className="text-center">
-                <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-cyber-purple to-cyber-red rounded-full flex items-center justify-center text-2xl">
-                  ⚡
-                </div>
-                <h3 className="text-lg font-semibold text-white mb-2">Smart Alerts</h3>
-                <p className="text-slate-400 text-sm">Intelligent risk scoring and notifications</p>
-              </div>
+            
+            <div className="cyber-card p-6 text-center">
+              <Shield className="w-12 h-12 text-cyber-purple mx-auto mb-4" />
+              <h3 className="text-xl font-semibold mb-2 text-white">AI-Powered</h3>
+              <p className="text-slate-400">Machine learning algorithms that adapt to new threats</p>
             </div>
           </div>
         </div>
